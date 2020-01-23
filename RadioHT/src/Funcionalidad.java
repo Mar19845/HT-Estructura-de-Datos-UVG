@@ -10,4 +10,5 @@ public interface Funcionalidad {
     public void avanzar();
     public void guardar(int boton);
     public void seleccionarEmisora(int boton);
+    
 }
