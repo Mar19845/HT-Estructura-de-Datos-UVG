@@ -3,7 +3,7 @@
  * @author Juan Marroquin
  */
 public interface Funcionalidad {
-     public String estacionActual();
+    public String estacionActual();
     public boolean estado();
     public void onOff();
     public void cambiarFrecuencia();
