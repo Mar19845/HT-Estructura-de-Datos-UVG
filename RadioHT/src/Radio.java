@@ -8,6 +8,8 @@ public class Radio implements Funcionalidad{
     private Emisoras[] EmisoraAm;
     private Emisoras[][] Favoritas;
     private int Freq;
+    private int PosFm;
+    private int PosAm;
     //Constructor
     public Radio(){
         Encendido = false;
@@ -15,7 +17,8 @@ public class Radio implements Funcionalidad{
         EmisoraFm = new Emisoras[20];
         EmisoraAm = new Emisoras[20];
         Favoritas = new Emisoras[2][12];
-        
+        PosFm = 0;
+        PosAm=0;
         //Llenar Estaciones Fm
         EmisoraFm[0] = new Emisoras("88.1", 0);
 	EmisoraFm[1] = new Emisoras("89.7", 1);
@@ -62,8 +65,22 @@ public class Radio implements Funcionalidad{
     
     @Override
     public String estacionActual() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String Y ="";
+        if(Freq==1){
+            for (int x = EmisoraFm[0].getFrecuencia();x < EmisoraFm[19].getFrecuencia(); x++){
+                Y = "La emisora actual es"+  x;
+                
+            }
+        }
+        else if(Freq==0){
+            for (int x = EmisoraAm[0].getFrecuencia();x < EmisoraAm[19].getFrecuencia(); x++){
+                Y = "La emisora actual es"+  x;
+                
+            }
+        }
+        return Y;
     }
+    
 
     @Override
     public boolean estado() {
@@ -82,17 +99,42 @@ public class Radio implements Funcionalidad{
 
     @Override
     public void avanzar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(Freq == 1) {
+            PosFm++;
+            if(PosFm==20) {
+                PosFm = 0;
+            }
+	}
+        else if(Freq == 0) {
+            PosAm++;
+            if(PosAm == 19) {
+                PosAm = 0;
+            }
+        }
     }
 
     @Override
     public void guardar(int boton) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        boton= boton-1;
+        if(Freq == 1) {
+            Favoritas[Freq][boton] = EmisoraFm[PosFm];
+        }
+        else if(Freq == 0) {
+            Favoritas[Freq][boton] = EmisoraFm[PosAm];
+        }
     }
+        
 
     @Override
     public void seleccionarEmisora(int boton) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        boton= boton-1;
+       if(Favoritas[Freq][boton] != null) {
+           if(Freq == 1) {
+               PosFm = Favoritas[Freq][boton].getFrecuencia();	
+           }
+           if(Freq == 0) {
+               PosAm = Favoritas[Freq][boton].getFrecuencia();
+           }
+		}
+	} 
     }
-    
-}
