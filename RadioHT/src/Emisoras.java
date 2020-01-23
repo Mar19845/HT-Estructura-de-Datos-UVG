@@ -24,5 +24,5 @@ public class Emisoras {
     public void setFrecuencia(int Frecuencia) {
         this.Frecuencia = Frecuencia;
     }
-    
+        
 }
