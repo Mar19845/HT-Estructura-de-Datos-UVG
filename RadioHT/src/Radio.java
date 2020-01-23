@@ -65,31 +65,35 @@ public class Radio implements Funcionalidad{
     
     @Override
     public String estacionActual() {
-        String Y ="";
+        String Descripcion ="";
         if(Freq==1){
-            for (int x = EmisoraFm[0].getFrecuencia();x < EmisoraFm[19].getFrecuencia(); x++){
-                Y = "La emisora actual es"+  x;
-                
+            if(EmisoraFm[PosFm]!=null){
+                Descripcion=EmisoraFm[PosFm].getEstacion()+" Fm";  
             }
         }
         else if(Freq==0){
-            for (int x = EmisoraAm[0].getFrecuencia();x < EmisoraAm[19].getFrecuencia(); x++){
-                Y = "La emisora actual es"+  x;
-                
+            if(EmisoraAm[PosAm]!=null){
+                Descripcion=EmisoraAm[PosAm].getEstacion()+" Am";  
             }
         }
-        return Y;
+        return Descripcion;
     }
     
-
     @Override
     public boolean estado() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String Estado= "";
+        if (Encendido != true){
+            Estado = "Estoy encendido";
+        }
+        else{
+            Estado = "Estoy Apagado";
+        }
+        return Encendido;
     }
 
     @Override
     public void onOff() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
