@@ -15,6 +15,7 @@ public class Radio implements Funcionalidad{
         EmisoraFm = new Emisoras[20];
         EmisoraAm = new Emisoras[20];
         Favoritas = new Emisoras[2][12];
+        
         //Llenar Estaciones Fm
         EmisoraFm[0] = new Emisoras("88.1", 0);
 	EmisoraFm[1] = new Emisoras("89.7", 1);
