@@ -81,19 +81,12 @@ public class Radio implements Funcionalidad{
     
     @Override
     public boolean estado() {
-        String Estado= "";
-        if (Encendido != true){
-            Estado = "Estoy encendido";
-        }
-        else{
-            Estado = "Estoy Apagado";
-        }
         return Encendido;
     }
 
     @Override
     public void onOff() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        encendido = !encendido;
     }
 
     @Override
