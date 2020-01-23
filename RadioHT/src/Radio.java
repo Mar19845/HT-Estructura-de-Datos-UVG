@@ -61,7 +61,8 @@ public class Radio implements Funcionalidad{
     }
     
     @Override
-    public double cambiarFrecuencia () {
+    public double estacionActual() {
+         public void cambiarFrecuencia(){
         Encendido = false;
         Freq = 1; // 1 = Fm / 0 = Am
         EmisoraFm = new Emisoras[20];
@@ -119,64 +120,20 @@ public class Radio implements Funcionalidad{
        	System.out.println("La emisora actual es"+  x);
 	}
     }
+    }
 
     @Override
     public boolean estado() {
-	
-        if (this.proceso.encendida = true){
-            System.out.println("Esta encendido");
-        }
-        else{
-            System.out.println("Esta apagado");
-        } 
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void onOff() {
-        public boolean encendida;
-	    public boolean apagada;
-	    public Procesos()
-		    
-	 {   
-	    //*Se inicializan los atributos.
-	    this.encendida = encendida;
-		 public void setencendida(boolean encendida)
-		 {
-		 this.encendida = encendida;
-		 }
-
-		 public boolean getencendida()
-		 {
-		 return encendida;
-		 }
-	 } 
-	    
-	     public String encencerRadio(Radio t){
-
-	 if(t.getencendido()==false){
-	    t.setencendido(true);
-	    return "El radio se eh encendido";
-	 }
-
-	    else
-	    return "El radio ya estaba encendido";
-
-	 }
-	 public String apagarRadio(Radio t){
-
-	 if(t.getencendido()==(true)){
-	    t.setencendido(false);
-	    return "El radio se apagó";
-	 }
-
-	    else
-	    return "El radio ya estaba apagado";
-	 }
-	} 
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void estacionActual() {
+    public void cambiarFrecuencia() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
