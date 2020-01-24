@@ -1,5 +1,5 @@
 /**
- *
+ *@author Carlos
  * @author Juan Marroquin
  */
 public class Radio implements Funcionalidad{
@@ -86,7 +86,7 @@ public class Radio implements Funcionalidad{
 
     @Override
     public void onOff() {
-        encendido = !encendido;
+        Encendido = !Encendido;
     }
 
     @Override
