@@ -40,6 +40,11 @@ public class Principal extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
         OnOff.setText("ON/OFF");
+        OnOff.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OnOffActionPerformed(evt);
+            }
+        });
 
         AmFm.setText("Am/Fm");
 
@@ -193,7 +198,7 @@ public class Principal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(BotonesFav, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -209,8 +214,8 @@ public class Principal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -223,6 +228,32 @@ public class Principal extends javax.swing.JFrame {
     private void Fav7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Fav7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Fav7ActionPerformed
+
+    private void OnOffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OnOffActionPerformed
+        Fav1.setEnabled(Radio.estado());
+        Fav2.setEnabled(Radio.estado());
+        Fav3.setEnabled(Radio.estado());
+        Fav4.setEnabled(Radio.estado());
+        Fav5.setEnabled(Radio.estado());
+        Fav6.setEnabled(Radio.estado());
+        Fav7.setEnabled(Radio.estado());
+        Fav8.setEnabled(Radio.estado());
+        Fav9.setEnabled(Radio.estado());
+        Fav10.setEnabled(Radio.estado());
+        Fav11.setEnabled(Radio.estado());
+        Fav12.setEnabled(Radio.estado());
+        Avanzar.setEnabled(Radio.estado());
+        GuardarEstacion.setEnabled(Radio.estado());
+        BotonesFav.setEnabled(Radio.estado());
+        AmFm.setEnabled(Radio.estado());
+        if(Radio.estado()==true){
+            Estado.setText("ON");
+        }
+        else if(Radio.estado()==false){
+            Estado.setText("OFF");
+        }
+        Radio.onOff();
+    }//GEN-LAST:event_OnOffActionPerformed
     //Interfaz que deben de cambiar
     Funcionalidad Radio = new Radio();
     public static void main(String args[]) {
