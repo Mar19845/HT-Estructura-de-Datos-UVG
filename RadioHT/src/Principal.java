@@ -47,12 +47,27 @@ public class Principal extends javax.swing.JFrame {
         });
 
         AmFm.setText("Am/Fm");
+        AmFm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AmFmActionPerformed(evt);
+            }
+        });
 
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         Fav1.setText("1");
+        Fav1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Fav1ActionPerformed(evt);
+            }
+        });
 
         Fav2.setText("2");
+        Fav2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Fav2ActionPerformed(evt);
+            }
+        });
 
         Fav3.setText("3");
         Fav3.addActionListener(new java.awt.event.ActionListener() {
@@ -62,14 +77,29 @@ public class Principal extends javax.swing.JFrame {
         });
 
         Fav4.setText("4");
+        Fav4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Fav4ActionPerformed(evt);
+            }
+        });
 
         Fav5.setText("5");
+        Fav5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Fav5ActionPerformed(evt);
+            }
+        });
 
         Fav6.setText("6");
+        Fav6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Fav6ActionPerformed(evt);
+            }
+        });
 
         Estacion.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Estacion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Estacion.setText("89.7");
+        Estacion.setText("   ");
 
         Fav7.setText("7");
         Fav7.addActionListener(new java.awt.event.ActionListener() {
@@ -79,16 +109,46 @@ public class Principal extends javax.swing.JFrame {
         });
 
         Fav8.setText("8");
+        Fav8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Fav8ActionPerformed(evt);
+            }
+        });
 
         Fav9.setText("9");
+        Fav9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Fav9ActionPerformed(evt);
+            }
+        });
 
         Fav10.setText("10");
+        Fav10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Fav10ActionPerformed(evt);
+            }
+        });
 
         Fav11.setText("11");
+        Fav11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Fav11ActionPerformed(evt);
+            }
+        });
 
         Fav12.setText("12");
+        Fav12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Fav12ActionPerformed(evt);
+            }
+        });
 
         Avanzar.setText(">");
+        Avanzar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AvanzarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -159,8 +219,13 @@ public class Principal extends javax.swing.JFrame {
         Estado.setText("On");
 
         GuardarEstacion.setText("Guardar");
+        GuardarEstacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GuardarEstacionActionPerformed(evt);
+            }
+        });
 
-        BotonesFav.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Canal 1", "Canal 2", "Canal 3", "Canal 4", "Canal 5", "Canal 6", "Canal 7", "Canal 8", "Canal 9", "Canal 10", "Canal 11", "Canal 12" }));
+        BotonesFav.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -208,7 +273,7 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -222,11 +287,15 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Fav3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Fav3ActionPerformed
-        // TODO add your handling code here:
+       int Num=3;
+       Radio.seleccionarEmisora(Num);
+       Estacion.setText(Radio.estacionActual());
     }//GEN-LAST:event_Fav3ActionPerformed
 
     private void Fav7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Fav7ActionPerformed
-        // TODO add your handling code here:
+        int Num=7;
+        Radio.seleccionarEmisora(Num);
+        Estacion.setText(Radio.estacionActual());
     }//GEN-LAST:event_Fav7ActionPerformed
 
     private void OnOffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OnOffActionPerformed
@@ -254,6 +323,84 @@ public class Principal extends javax.swing.JFrame {
         }
         Radio.onOff();
     }//GEN-LAST:event_OnOffActionPerformed
+
+    private void AmFmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AmFmActionPerformed
+        Radio.cambiarFrecuencia();
+        Estacion.setText(Radio.estacionActual());
+    }//GEN-LAST:event_AmFmActionPerformed
+
+    private void AvanzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AvanzarActionPerformed
+        Radio.avanzar();
+        Estacion.setText(Radio.estacionActual());
+    }//GEN-LAST:event_AvanzarActionPerformed
+
+    private void GuardarEstacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarEstacionActionPerformed
+        int Num;
+        Num = Integer.parseInt(BotonesFav.getSelectedItem().toString());
+        Radio.guardar(Num);
+        
+    }//GEN-LAST:event_GuardarEstacionActionPerformed
+
+    private void Fav1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Fav1ActionPerformed
+        int Num=1;
+        Radio.seleccionarEmisora(Num);
+        Estacion.setText(Radio.estacionActual());
+    }//GEN-LAST:event_Fav1ActionPerformed
+
+    private void Fav2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Fav2ActionPerformed
+        int Num=2;
+        Radio.seleccionarEmisora(Num);
+        Estacion.setText(Radio.estacionActual());
+    }//GEN-LAST:event_Fav2ActionPerformed
+
+    private void Fav4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Fav4ActionPerformed
+        int Num=4;
+        Radio.seleccionarEmisora(Num);
+        Estacion.setText(Radio.estacionActual());
+        Estacion.setText(Radio.estacionActual());
+    }//GEN-LAST:event_Fav4ActionPerformed
+
+    private void Fav5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Fav5ActionPerformed
+        int Num=5;
+        Radio.seleccionarEmisora(Num);
+        Estacion.setText(Radio.estacionActual());
+    }//GEN-LAST:event_Fav5ActionPerformed
+
+    private void Fav6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Fav6ActionPerformed
+        int Num=6;
+        Radio.seleccionarEmisora(Num);
+        Estacion.setText(Radio.estacionActual());
+    }//GEN-LAST:event_Fav6ActionPerformed
+
+    private void Fav8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Fav8ActionPerformed
+        int Num=8;
+        Radio.seleccionarEmisora(Num);
+        Estacion.setText(Radio.estacionActual());
+    }//GEN-LAST:event_Fav8ActionPerformed
+
+    private void Fav9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Fav9ActionPerformed
+        int Num=9;
+        Radio.seleccionarEmisora(Num);
+        Estacion.setText(Radio.estacionActual());
+    }//GEN-LAST:event_Fav9ActionPerformed
+
+    private void Fav10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Fav10ActionPerformed
+        int Num=10;
+        Radio.seleccionarEmisora(Num);
+        Estacion.setText(Radio.estacionActual());
+    }//GEN-LAST:event_Fav10ActionPerformed
+
+    private void Fav11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Fav11ActionPerformed
+        int Num=11;
+        Radio.seleccionarEmisora(Num);
+        Estacion.setText(Radio.estacionActual());
+    }//GEN-LAST:event_Fav11ActionPerformed
+
+    private void Fav12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Fav12ActionPerformed
+        int Num=12;
+        Radio.seleccionarEmisora(Num);
+        Estacion.setText(Radio.estacionActual());
+    }//GEN-LAST:event_Fav12ActionPerformed
     //Interfaz que deben de cambiar
     Funcionalidad Radio = new Radio();
     public static void main(String args[]) {

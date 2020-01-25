@@ -26,7 +26,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="13" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -112,6 +112,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Am/Fm"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AmFmActionPerformed"/>
+          </Events>
         </Component>
         <Container class="javax.swing.JPanel" name="jPanel2">
           <Properties>
@@ -207,11 +210,17 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="1"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Fav1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="Fav2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="2"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Fav2ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="Fav3">
               <Properties>
@@ -225,16 +234,25 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="4"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Fav4ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="Fav5">
               <Properties>
                 <Property name="text" type="java.lang.String" value="5"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Fav5ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="Fav6">
               <Properties>
                 <Property name="text" type="java.lang.String" value="6"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Fav6ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="Estacion">
               <Properties>
@@ -242,7 +260,7 @@
                   <Font name="Tahoma" size="18" style="0"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="89.7"/>
+                <Property name="text" type="java.lang.String" value="   "/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="Fav7">
@@ -257,31 +275,49 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="8"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Fav8ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="Fav9">
               <Properties>
                 <Property name="text" type="java.lang.String" value="9"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Fav9ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="Fav10">
               <Properties>
                 <Property name="text" type="java.lang.String" value="10"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Fav10ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="Fav11">
               <Properties>
                 <Property name="text" type="java.lang.String" value="11"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Fav11ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="Fav12">
               <Properties>
                 <Property name="text" type="java.lang.String" value="12"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Fav12ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="Avanzar">
               <Properties>
                 <Property name="text" type="java.lang.String" value="&gt;"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AvanzarActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -294,23 +330,26 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Guardar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GuardarEstacionActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JComboBox" name="BotonesFav">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="12">
-                <StringItem index="0" value="Canal 1"/>
-                <StringItem index="1" value="Canal 2"/>
-                <StringItem index="2" value="Canal 3"/>
-                <StringItem index="3" value="Canal 4"/>
-                <StringItem index="4" value="Canal 5"/>
-                <StringItem index="5" value="Canal 6"/>
-                <StringItem index="6" value="Canal 7"/>
-                <StringItem index="7" value="Canal 8"/>
-                <StringItem index="8" value="Canal 9"/>
-                <StringItem index="9" value="Canal 10"/>
-                <StringItem index="10" value="Canal 11"/>
-                <StringItem index="11" value="Canal 12"/>
+                <StringItem index="0" value="1"/>
+                <StringItem index="1" value="2"/>
+                <StringItem index="2" value="3"/>
+                <StringItem index="3" value="4"/>
+                <StringItem index="4" value="5"/>
+                <StringItem index="5" value="6"/>
+                <StringItem index="6" value="7"/>
+                <StringItem index="7" value="8"/>
+                <StringItem index="8" value="9"/>
+                <StringItem index="9" value="10"/>
+                <StringItem index="10" value="11"/>
+                <StringItem index="11" value="12"/>
               </StringArray>
             </Property>
           </Properties>
