@@ -91,7 +91,11 @@ public class Radio implements Funcionalidad{
 
     @Override
     public void cambiarFrecuencia() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       if (frecuencia ==1){
+       		frecuencia == 0;
+       }else{
+       		frecuencia = 1;
+       }
     }
 
     @Override
