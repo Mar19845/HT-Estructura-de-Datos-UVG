@@ -64,6 +64,7 @@ public class Radio implements Funcionalidad{
     }
     
     @Override
+	//mostrar cual es la estacion actual
     public String estacionActual() {
         String Descripcion ="";
         if(Freq==1){
@@ -80,17 +81,20 @@ public class Radio implements Funcionalidad{
     }
     
     @Override
+	//mostrar estado
     public boolean estado() {
         return Encendido;
     }
 
     @Override
+	//encendido o apagado
     public void onOff() {
         Encendido = !Encendido;
     }
 
     @Override
     public void cambiarFrecuencia() {
+	//cambio de frecuencia
        if (frecuencia ==1){
        		frecuencia == 0;
        }else{
