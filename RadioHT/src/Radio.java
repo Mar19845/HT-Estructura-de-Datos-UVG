@@ -103,6 +103,7 @@ public class Radio implements Funcionalidad{
     }
 
     @Override
+	//metodo para avanzar de estacion
     public void avanzar() {
         if(Freq == 1) {
             PosFm++;
@@ -119,6 +120,7 @@ public class Radio implements Funcionalidad{
     }
 
     @Override
+	//metodod para que el usuario guarde su emisora
     public void guardar(int boton) {
         boton= boton-1;
         if(Freq == 1) {
