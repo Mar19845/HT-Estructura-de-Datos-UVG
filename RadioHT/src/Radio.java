@@ -94,12 +94,15 @@ public class Radio implements Funcionalidad{
 
     @Override
     public void cambiarFrecuencia() {
-	//cambio de frecuencia
-       if (frecuencia ==1){
-       		frecuencia == 0;
-       }else{
-       		frecuencia = 1;
-       }
+    //cambio de frecuencia
+        int i=1;
+        if(Freq==1){
+            Freq=0;
+        }
+        else if(Freq==0){
+            Freq=1;
+            
+        }
     }
 
     @Override
@@ -120,7 +123,7 @@ public class Radio implements Funcionalidad{
     }
 
     @Override
-	//metodod para que el usuario guarde su emisora
+    //metodod para que el usuario guarde su emisora
     public void guardar(int boton) {
         boton= boton-1;
         if(Freq == 1) {
