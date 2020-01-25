@@ -1,5 +1,5 @@
 /**
- *@author Carlos
+ *@author Carlos Raxtum
  * @author Juan Marroquin
  */
 public class Principal extends javax.swing.JFrame {
